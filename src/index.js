@@ -35,16 +35,8 @@ btnRef.addEventListener('click', event => {
   fetchPics(searchQuery, page).then(pics => {
     updatePicture(pics);
     page = page + 1;
-
-    scroll()
+    
   });
 })
 
-function scroll() {
-  const coordY = btnRef.scrollY + btnRef.innerHeight - 98;
 
-     window.scrollTo({
-    top: coordY,
-    behavior: 'smooth',
-  });
-}
